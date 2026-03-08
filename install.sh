@@ -10,7 +10,7 @@ echo "==> Night Color Override — installer"
 echo
 
 # Dependency check
-if ! python3 -c "import dbus" 2>/dev/null; then
+if ! pacman -Q python-dbus &>/dev/null; then
     echo "WARNING: python-dbus is not installed."
     echo "         Run:  sudo pacman -S python-dbus"
     echo "         The daemon will not start without it."
