@@ -22,8 +22,8 @@ PlasmoidItem {
                                     .toString().replace(/^file:\/\//, "")
 
     // ── Tooltip ──────────────────────────────────────────────────────────────
-    Plasmoid.toolTipMainText: "Night Color Override"
-    Plasmoid.toolTipSubText: active
+    toolTipMainText: "Night Color Override"
+    toolTipSubText: active
         ? liveKwinTemp + " K — " + formatRemaining(secondsRemaining, chosenDuration)
         : "Inactive — " + liveKwinTemp + " K"
 

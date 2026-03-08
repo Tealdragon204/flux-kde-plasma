@@ -54,7 +54,6 @@ Two components:
 
 ```bash
 rm -rf ~/.local/share/plasma/plasmoids/com.local.nightcoloroverride
-plasmapkg6 --remove com.local.nightcoloroverride
 ```
 
 ## License
