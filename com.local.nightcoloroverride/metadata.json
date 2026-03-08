@@ -1,0 +1,18 @@
+{
+  "KPlugin": {
+    "Id": "com.local.nightcoloroverride",
+    "Name": "Night Color Override",
+    "Description": "Timed override of KWin Night Color temperature for movie mode and similar presets",
+    "Icon": "redshift-status-on",
+    "Version": "1.0",
+    "License": "GPL-3.0",
+    "Authors": [
+      {
+        "Name": "User"
+      }
+    ],
+    "Category": "System Information"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "KPackageStructure": "Plasma/Applet"
+}
