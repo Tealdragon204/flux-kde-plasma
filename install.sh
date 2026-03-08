@@ -24,10 +24,10 @@ mkdir -p "$DEST_DIR"
 cp -r "$SRC_DIR"/. "$DEST_DIR/"
 chmod +x "$DEST_DIR/contents/scripts/nightcolor-mode.py"
 
-# Register with Plasma (ignore errors from plasmapkg6 if widget is already added)
-if command -v plasmapkg6 &>/dev/null; then
-    plasmapkg6 --install "$DEST_DIR" 2>/dev/null \
-        || plasmapkg6 --upgrade "$DEST_DIR" 2>/dev/null \
+# Register with Plasma (optional — direct file copy above is sufficient)
+if command -v kpackagetool6 &>/dev/null; then
+    kpackagetool6 --type Plasma/Applet --install "$DEST_DIR" 2>/dev/null \
+        || kpackagetool6 --type Plasma/Applet --upgrade "$DEST_DIR" 2>/dev/null \
         || true
 fi
 
@@ -37,4 +37,3 @@ echo "  Right-click the system tray → Add Widgets → search 'Night Color Over
 echo
 echo "To uninstall:"
 echo "  rm -rf \"$DEST_DIR\""
-echo "  plasmapkg6 --remove $PLASMOID_ID"
